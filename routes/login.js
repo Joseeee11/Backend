@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var cors = require('cors');
 
 let arr=[]
 
@@ -9,12 +10,8 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
-
-    const entrada= req.body
-    arr.push(entrada)
-    console.log(req.body);
-    
-
+  console.log(req.body);
+  res.send("Ok")
   });
 
 module.exports = router;
